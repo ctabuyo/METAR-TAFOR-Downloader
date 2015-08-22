@@ -28,7 +28,7 @@ namespace WindowsFormsApplication1
 
             using (WebClient client = new WebClient())
             {
-                string s = client.DownloadString("http://wx.ivao.aero/taf.php?id="+code);
+                string s = client.DownloadString(url);
                 if (s == "") {
                     s = ("No hay datos de TAFOR para este aeropuerto :-(");
                 }
@@ -56,7 +56,7 @@ namespace WindowsFormsApplication1
             using (WebClient client = new WebClient())
 
             {
-                string s = client.DownloadString("http://wx.ivao.aero/metar.php?id=" + code);
+                string s = client.DownloadString(url);
                 if (s == "")
                 {
                     s = ("No hay datos de METAR para este aeropuerto :-(");
