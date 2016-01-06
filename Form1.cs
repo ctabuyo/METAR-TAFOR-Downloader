@@ -29,7 +29,7 @@ namespace WindowsFormsApplication1
             using (WebClient client = new WebClient())
             {
                 string s = client.DownloadString(url);
-                if (s == "") {
+                if (s == string.null) {
                     s = ("No hay datos de TAFOR para este aeropuerto :-(");
                 }
                 MessageBox.Show(s);
@@ -57,7 +57,7 @@ namespace WindowsFormsApplication1
 
             {
                 string s = client.DownloadString(url);
-                if (s == "")
+                if (s == string.null)
                 {
                     s = ("No hay datos de METAR para este aeropuerto :-(");
                 }
